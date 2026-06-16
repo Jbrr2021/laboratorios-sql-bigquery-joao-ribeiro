@@ -1,5 +1,13 @@
--- CONCEITO: Uso avançado de parênteses para isolar condições OR dentro de múltiplos AND (Fase de Informar)
--- OBJETIVO: Filtrar recursos de Produção com teto mínimo de gastos focado exclusivamente nas equipes de Engenharia e BI, com ordenação decrescente
+-- =================================================================================
+-- FRAMEWORK CLOUD FINOPS - PARTE 1 / FASE DE INFORMAR (Inform)
+-- CONCEITO: Precedência de Operadores Lógicos e Segregação de Equipes com Parênteses
+--
+-- CONTEXTO DE NEGÓCIO (Pedido do Gestor):
+-- "Preciso de um relatório cirúrgico para a diretoria financeira focado exclusivamente nas 
+-- equipes de Engenharia e BI. Quero auditar quais recursos dessas áreas rodaram especificamente 
+-- no ambiente de 'Produção' e que, individualmente, registraram um gasto maior do que R$ 50,00. 
+-- Traga o nome do serviço, equipe, projeto e o valor gasto, ordenando do maior para o menor."
+-- =================================================================================
 
 SELECT 
   nome_servico,
