@@ -1,5 +1,14 @@
--- CONCEITO: Modelagem lógica e carga física de dados estruturados (DDL/DML)
--- OBJETIVO: Criar do zero e enriquecer a tabela de custos de nuvem com dimensões de ambiente, equipe e projeto
+-- =================================================================================
+-- ENGENHARIA DE DADOS / MODELAGEM E INGESTÃO DE DADOS (DDL/DML)
+-- CONCEITO: Criação de Tabela Enriquecida e Ingestão por Union All
+--
+-- CONTEXTO DE NEGÓCIO (Cenário de Engenharia):
+-- "Para dar suporte às análises do time de Cloud FinOps, precisamos criar e popular uma 
+-- tabela analítica simulando um pipeline de logs de faturamento de nuvem (Billing Data). 
+-- O script deve criar do zero (ou substituir se já existir) a tabela 'custos_nuvem_teste' 
+-- dentro do dataset 'meu_finops', unificando dados legados e novos registros enriquecidos 
+-- com dimensões de ambiente, equipe e projeto."
+-- =================================================================================
 
 CREATE OR REPLACE TABLE `meu_finops.custos_nuvem_teste` AS
 -- Dados antigos atualizados
