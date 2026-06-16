@@ -1,5 +1,13 @@
--- CONCEITO: Consolidação e agregação macro utilizando funções de extração de data EXTRACT
--- OBJETIVO: Gerar o custo total e a média de gastos agrupados por mês analítico para relatórios gerenciais executivos
+-- =================================================================================
+-- FRAMEWORK CLOUD FINOPS - PARTE 1 / FASE DE INFORMAR (Inform)
+-- CONCEITO: Consolidação Periódica e Extração de Componentes de Data (EXTRACT)
+--
+-- CONTEXTO DE NEGÓCIO (Pedido do Gestor):
+-- "Preciso de um relatório macro mensal para apresentar à diretoria. Quero saber qual foi 
+-- o gasto total acumulado e o gasto médio por recurso focado exclusivamente no mês de maio. 
+-- Não quero ver os dias separados; preciso de apenas uma linha consolidada mostrando a soma 
+-- total e a média ponderada (com duas casas decimais) daquele período completo."
+-- =================================================================================
 
 SELECT
   EXTRACT(MONTH FROM data_uso) AS mes_analise,
