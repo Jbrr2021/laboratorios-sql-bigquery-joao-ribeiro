@@ -1,5 +1,14 @@
--- CONCEITO: Filtragem de valores agregados utilizando a cláusula HAVING (Fase de Otimização)
--- OBJETIVO: Identificar quais projetos acumulados ultrapassaram o teto orçamentário de R$ 300,00, ordenando do maior para o menor impacto financeiro
+-- =================================================================================
+-- FRAMEWORK CLOUD FINOPS - PARTE 1 / FASE DE OTIMIZAÇÃO (Optimize)
+-- CONCEITO: Filtragem Pós-Agregação com Cláusula HAVING
+--
+-- CONTEXTO DE NEGÓCIO (Pedido do Gestor):
+-- "O time de finanças reportou que o custo total de maio ultrapassou as expectativas. 
+-- Para uma ação rápida de contenção, preciso de um relatório focado em identificar quais 
+-- projetos específicos e suas respectivas equipes estão estourando o orçamento. 
+-- Filtre e exiba APENAS os projetos cujo custo total somado acumulado tenha sido MAIOR 
+-- do que R$ 300,00, ordenando do maior gasto para o menor para priorizarmos a atuação."
+-- =================================================================================
 
 SELECT
   projeto,
