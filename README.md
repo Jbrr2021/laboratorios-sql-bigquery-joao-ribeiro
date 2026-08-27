@@ -33,6 +33,9 @@ Para dar suporte aos casos de uso, estruturei a tabela analítica `custos_nuvem_
 ### ⚙️ 1. Infraestrutura e Pipeline Inicial
 * `setup_carga_inicial_logs_faturamento.sql`  
   **Objetivo:** Criação física e modelagem da base de dados analítica utilizando DDL/DML e unificação de históricos via `UNION ALL`.
+### 🧹 1.1 Saneamento e Qualidade dos Dados (Data Quality)
+* `higienizacao_strings_e_tratamento_nulos.sql`  
+  **Pedido do Gestor:** Padronizar nomenclaturas de projetos e tratar valores nulos para evitar inconsistências nos relatórios consolidados.
 
 ### 🕵️‍♂️ 2. Auditoria e Identificação de Anomalias (Fase de Informar)
 * `identificacao_anomalias_custo_acima_da_media.sql`  
@@ -43,6 +46,11 @@ Para dar suporte aos casos de uso, estruturei a tabela analítica `custos_nuvem_
   **Pedido do Gestor:** Analisar tendências financeiras da reta final do mês filtrando a segunda quinzena via `BETWEEN`.
 * `auditoria_filtros_multiplos_e_segregacao_equipes.sql`  
   **Pedido do Gestor:** Filtrar recursos de Produção com teto mínimo de gastos focado exclusivamente nas equipes de Engenharia e BI, com controle de precedência lógica (`AND`/`OR`).
+### 🚨 2.1 Classificação e Painel de KPIs
+* `classificacao_alertas_custo_case_when.sql`  
+  **Pedido do Gestor:** Criar regras condicionais de alerta (`CASE WHEN`) para rotular os níveis de custo em faixas operacionais.
+* `painel_kpi_agregacao_condicional_case_when.sql`  
+  **Pedido do Gestor:** Construir métricas agregadas combinando lógica condicional e contagens para visão executiva de indicadores-chave.
 
 ### 💰 3. Alocação de Custos e Rateio (Fase de Informar)
 * `alocacao_custos_desenvolvimento_por_equipe.sql`  
